@@ -6,8 +6,10 @@
 //  Copyright © 2020 Ricardo González Pacheco. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol FlowCoordinator {
-    
+    var name: String { get }
+    var flowNavManager: UINavigationController? { get set }
+    func startFlow() -> UINavigationController?
 }

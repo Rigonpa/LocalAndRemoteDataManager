@@ -15,7 +15,7 @@
 		935229912501325500D5A404 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935229902501325500D5A404 /* ServiceManager.swift */; };
 		935229942501328B00D5A404 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935229932501328B00D5A404 /* NavigationManager.swift */; };
 		93522997250132AB00D5A404 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93522996250132AB00D5A404 /* FlowCoordinator.swift */; };
-		9352299B250132CB00D5A404 /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352299A250132CB00D5A404 /* MainFlowCoordinator.swift */; };
+		9352299B250132CB00D5A404 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352299A250132CB00D5A404 /* MainFlow.swift */; };
 		935229A02501332A00D5A404 /* RemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352299F2501332A00D5A404 /* RemoteDataManager.swift */; };
 		935229A22501333300D5A404 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935229A12501333300D5A404 /* LocalDataManager.swift */; };
 		935229A42501535C00D5A404 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935229A32501535C00D5A404 /* DataManager.swift */; };
@@ -46,7 +46,7 @@
 		935229902501325500D5A404 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		935229932501328B00D5A404 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		93522996250132AB00D5A404 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
-		9352299A250132CB00D5A404 /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
+		9352299A250132CB00D5A404 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
 		9352299F2501332A00D5A404 /* RemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataManager.swift; sourceTree = "<group>"; };
 		935229A12501333300D5A404 /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
 		935229A32501535C00D5A404 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		93522999250132BE00D5A404 /* MainFlow */ = {
 			isa = PBXGroup;
 			children = (
-				9352299A250132CB00D5A404 /* MainFlowCoordinator.swift */,
+				9352299A250132CB00D5A404 /* MainFlow.swift */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -312,7 +312,7 @@
 				935229A42501535C00D5A404 /* DataManager.swift in Sources */,
 				9352298F2501324700D5A404 /* Manager.swift in Sources */,
 				935229A22501333300D5A404 /* LocalDataManager.swift in Sources */,
-				9352299B250132CB00D5A404 /* MainFlowCoordinator.swift in Sources */,
+				9352299B250132CB00D5A404 /* MainFlow.swift in Sources */,
 				935229A02501332A00D5A404 /* RemoteDataManager.swift in Sources */,
 				935229A8250153D700D5A404 /* LocalDataManagerProtocol.swift in Sources */,
 				93522997250132AB00D5A404 /* FlowCoordinator.swift in Sources */,
