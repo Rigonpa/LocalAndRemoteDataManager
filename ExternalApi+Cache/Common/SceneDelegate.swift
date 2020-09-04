@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         Manager.startupManagers { success in
             if success {
-                Manager.navigation.create()
+                Manager.navigation.startApp()
             }
         }
     }

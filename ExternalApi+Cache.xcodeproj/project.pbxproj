@@ -21,6 +21,17 @@
 		935229A42501535C00D5A404 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935229A32501535C00D5A404 /* DataManager.swift */; };
 		935229A6250153C400D5A404 /* RemoteDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935229A5250153C400D5A404 /* RemoteDataManagerProtocol.swift */; };
 		935229A8250153D700D5A404 /* LocalDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935229A7250153D700D5A404 /* LocalDataManagerProtocol.swift */; };
+		937A9282250236B50023A21A /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A9281250236B50023A21A /* ListRouter.swift */; };
+		937A92852502381F0023A21A /* ListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A92842502381F0023A21A /* ListContract.swift */; };
+		937A92872502382F0023A21A /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A92862502382F0023A21A /* ListPresenter.swift */; };
+		937A9289250238540023A21A /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A9288250238540023A21A /* ListInteractor.swift */; };
+		937A928B250238640023A21A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A928A250238640023A21A /* ListView.swift */; };
+		937A928D25023BF40023A21A /* ListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A928C25023BF40023A21A /* ListItemModel.swift */; };
+		93FAF039250286E5004E0EF8 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FAF038250286E5004E0EF8 /* DetailRouter.swift */; };
+		93FAF03B250286EF004E0EF8 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FAF03A250286EF004E0EF8 /* DetailPresenter.swift */; };
+		93FAF03D250286F7004E0EF8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FAF03C250286F7004E0EF8 /* DetailView.swift */; };
+		93FAF03F25028703004E0EF8 /* DetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FAF03E25028703004E0EF8 /* DetailContract.swift */; };
+		93FAF04125029310004E0EF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93FAF04025029310004E0EF8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +63,17 @@
 		935229A32501535C00D5A404 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		935229A5250153C400D5A404 /* RemoteDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataManagerProtocol.swift; sourceTree = "<group>"; };
 		935229A7250153D700D5A404 /* LocalDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManagerProtocol.swift; sourceTree = "<group>"; };
+		937A9281250236B50023A21A /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		937A92842502381F0023A21A /* ListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContract.swift; sourceTree = "<group>"; };
+		937A92862502382F0023A21A /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		937A9288250238540023A21A /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		937A928A250238640023A21A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		937A928C25023BF40023A21A /* ListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModel.swift; sourceTree = "<group>"; };
+		93FAF038250286E5004E0EF8 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		93FAF03A250286EF004E0EF8 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		93FAF03C250286F7004E0EF8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		93FAF03E25028703004E0EF8 /* DetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContract.swift; sourceTree = "<group>"; };
+		93FAF04025029310004E0EF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +97,7 @@
 		9352295F2501311300D5A404 = {
 			isa = PBXGroup;
 			children = (
+				93FAF04025029310004E0EF8 /* Default-568h@2x.png */,
 				9352296A2501311300D5A404 /* ExternalApi+Cache */,
 				935229812501311400D5A404 /* ExternalApi+CacheTests */,
 				935229692501311300D5A404 /* Products */,
@@ -93,10 +116,7 @@
 		9352296A2501311300D5A404 /* ExternalApi+Cache */ = {
 			isa = PBXGroup;
 			children = (
-				9352296B2501311300D5A404 /* AppDelegate.swift */,
-				9352296D2501311300D5A404 /* SceneDelegate.swift */,
-				935229792501311400D5A404 /* Info.plist */,
-				9352298D2501323900D5A404 /* Managers */,
+				937A9283250238060023A21A /* Common */,
 				935229A92501557B00D5A404 /* Modules */,
 				935229AC250155B200D5A404 /* Resources */,
 			);
@@ -189,6 +209,12 @@
 		935229AA2501558D00D5A404 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				937A9281250236B50023A21A /* ListRouter.swift */,
+				937A92842502381F0023A21A /* ListContract.swift */,
+				937A92862502382F0023A21A /* ListPresenter.swift */,
+				937A9288250238540023A21A /* ListInteractor.swift */,
+				937A928A250238640023A21A /* ListView.swift */,
+				937A928C25023BF40023A21A /* ListItemModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -196,6 +222,10 @@
 		935229AB2501559300D5A404 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				93FAF038250286E5004E0EF8 /* DetailRouter.swift */,
+				93FAF03E25028703004E0EF8 /* DetailContract.swift */,
+				93FAF03A250286EF004E0EF8 /* DetailPresenter.swift */,
+				93FAF03C250286F7004E0EF8 /* DetailView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -206,6 +236,17 @@
 				935229742501311400D5A404 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		937A9283250238060023A21A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9352296B2501311300D5A404 /* AppDelegate.swift */,
+				9352296D2501311300D5A404 /* SceneDelegate.swift */,
+				935229792501311400D5A404 /* Info.plist */,
+				9352298D2501323900D5A404 /* Managers */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				935229752501311400D5A404 /* Assets.xcassets in Resources */,
+				93FAF04125029310004E0EF8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,14 +351,24 @@
 			files = (
 				935229A6250153C400D5A404 /* RemoteDataManagerProtocol.swift in Sources */,
 				9352296C2501311300D5A404 /* AppDelegate.swift in Sources */,
+				93FAF03F25028703004E0EF8 /* DetailContract.swift in Sources */,
 				935229A42501535C00D5A404 /* DataManager.swift in Sources */,
+				93FAF03B250286EF004E0EF8 /* DetailPresenter.swift in Sources */,
+				93FAF039250286E5004E0EF8 /* DetailRouter.swift in Sources */,
+				937A928B250238640023A21A /* ListView.swift in Sources */,
+				937A928D25023BF40023A21A /* ListItemModel.swift in Sources */,
 				9352298F2501324700D5A404 /* Manager.swift in Sources */,
 				935229A22501333300D5A404 /* LocalDataManager.swift in Sources */,
 				9352299B250132CB00D5A404 /* MainFlow.swift in Sources */,
+				93FAF03D250286F7004E0EF8 /* DetailView.swift in Sources */,
+				937A9289250238540023A21A /* ListInteractor.swift in Sources */,
 				935229A02501332A00D5A404 /* RemoteDataManager.swift in Sources */,
+				937A92852502381F0023A21A /* ListContract.swift in Sources */,
 				935229A8250153D700D5A404 /* LocalDataManagerProtocol.swift in Sources */,
 				93522997250132AB00D5A404 /* FlowCoordinator.swift in Sources */,
+				937A92872502382F0023A21A /* ListPresenter.swift in Sources */,
 				9352296E2501311300D5A404 /* SceneDelegate.swift in Sources */,
+				937A9282250236B50023A21A /* ListRouter.swift in Sources */,
 				935229912501325500D5A404 /* ServiceManager.swift in Sources */,
 				935229942501328B00D5A404 /* NavigationManager.swift in Sources */,
 			);
@@ -460,7 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "ExternalApi+Cache/Info.plist";
+				INFOPLIST_FILE = "ExternalApi+Cache/Common/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,7 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "ExternalApi+Cache/Info.plist";
+				INFOPLIST_FILE = "ExternalApi+Cache/Common/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -22,7 +22,9 @@ struct Manager {
     
     static func startupManagers(completion: (Bool) -> Void) {
         var allManagersProperlyStarted = true
+        
         let dispatchGroup = DispatchGroup()
+        
         dispatchGroup.enter()
         navigation.startup { navigation in
             allManagersProperlyStarted = navigation == nil ? false : true
