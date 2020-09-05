@@ -9,5 +9,6 @@
 import Foundation
 
 protocol LocalDataManagerProtocol {
-    
+    func getItems(completion: (Result<[Item], Error>) -> Void)
+    func persistItems(items: [ListItemModel]) throws
 }

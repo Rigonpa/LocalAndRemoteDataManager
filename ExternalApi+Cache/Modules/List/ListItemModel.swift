@@ -9,7 +9,7 @@
 import Foundation
 
 struct ListItemModel {
-    let id: Int = 0
-    let title: String = ""
-    let imageUrl: String = ""
+    let id: Int
+    let title: String
+    let imageUrl: String
 }

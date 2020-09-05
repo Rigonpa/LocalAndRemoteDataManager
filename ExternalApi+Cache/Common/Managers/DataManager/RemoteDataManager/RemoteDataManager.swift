@@ -9,5 +9,7 @@
 import Foundation
 
 class RemoteDataManager: RemoteDataManagerProtocol {
-    
+    func downloadItems(completion: (Result<[ListItemModel], Error>) -> Void) {
+        
+    }
 }
