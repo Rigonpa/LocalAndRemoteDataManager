@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol ListDelegate {
+protocol ListDelegate: class {
     func itemSelected(item: ListItemModel)
 }
 
 class ListRouter {
-    var delegate: ListDelegate?
-    static func create() -> UIViewController? {
+    weak var delegate: ListDelegate?
+    static func create() -> UIViewController {
         let router = ListRouter()
         let presenter = ListPresenter()
         let interactor = ListInteractor()

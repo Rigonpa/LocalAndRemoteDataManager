@@ -7,9 +7,21 @@
 //
 
 import Foundation
+import ObjectMapper
 
 struct ListItemModel {
-    let id: Int
-    let title: String
-    let imageUrl: String
+    var id: Int = 0
+    var title: String = ""
+    var imageUrl: String = ""
+}
+
+extension ListItemModel: Mappable {
+    init?(map: Map) {
+    }
+    
+    mutating func mapping(map: Map) {
+        id <- map["id"]
+        title <- map["title"]
+        imageUrl <- map["url"]
+    }
 }

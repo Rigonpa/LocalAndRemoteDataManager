@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import PKHUD
 
-class ListView: UIViewController {
+final class ListView: UIViewController {
     var presenter: ListPresenterProtocol?
     
     var items = [ListItemModel]() {
@@ -19,6 +20,7 @@ class ListView: UIViewController {
     
     lazy var tableView: UITableView = {
         let table = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints = false
         table.dataSource = self
         table.delegate = self
         return table
@@ -43,8 +45,16 @@ class ListView: UIViewController {
 }
 
 extension ListView: ListViewProtocol {
-    func onFetchingDataError() {
-        print("There was an error when fetching data")
+    func showLoading() {
+        HUD.show(.progress)
+    }
+    
+    func hideLoading() {
+        HUD.hide()
+    }
+    
+    func onFetchingDataError(error: Error) {
+        print("There was an error when fetching data: \(error.localizedDescription)")
     }
     
     func showItems(items: [ListItemModel]) {
@@ -54,6 +64,7 @@ extension ListView: ListViewProtocol {
 
 extension ListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         presenter?.itemSelected(item: items[indexPath.row])
     }
 }

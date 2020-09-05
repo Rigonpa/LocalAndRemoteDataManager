@@ -15,7 +15,7 @@ class DetailView: UIViewController {
     lazy var imageView: UIImageView = {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.contentMode = .scaleAspectFill
+        iv.contentMode = .scaleToFill
         return iv
     }()
     
@@ -32,8 +32,10 @@ class DetailView: UIViewController {
     }
     
     private func setupView() {
-        view.addSubview(imageView)
+        view.backgroundColor = .blue
+        title = "Detail"
         view.addSubview(titleLabel)
+        view.addSubview(imageView)
         
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

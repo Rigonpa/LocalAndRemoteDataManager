@@ -39,7 +39,9 @@ class LocalDataManager: LocalDataManagerProtocol {
         let request = NSFetchRequest<Item>(entityName: String(describing: Item.self))
         
         do {
-            completion(.success(try context.fetch(request)))
+            var list = try context.fetch(request)
+            list.sort(by: { $0.id < $1.id})
+            completion(.success(list))
             // Qué pasa si no hay ningún error de código, pero el array de items está vacío en core data
             // debería devolver completion(.success([])) pero no ningún error. ¿?¿?
         } catch let error {

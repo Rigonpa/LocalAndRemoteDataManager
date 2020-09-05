@@ -10,7 +10,7 @@ import Foundation
 
 struct Manager {
     
-    static var navigation: NavigationManager = {
+    static let navigation: NavigationManager = {
         let navigationManager = NavigationManager()
         return navigationManager
     }()
@@ -34,6 +34,7 @@ struct Manager {
         dispatchGroup.enter()
         dataManager.startup { dataManager in
             allManagersProperlyStarted = dataManager == nil ? false : true
+            dispatchGroup.leave()
         }
         
         dispatchGroup.wait()

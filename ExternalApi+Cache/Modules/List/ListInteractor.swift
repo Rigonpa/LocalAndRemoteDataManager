@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ListInteractor {
+final class ListInteractor {
     
     weak var output: ListInteractorOutput?
     var dataManager: DataManager?
@@ -17,12 +17,12 @@ class ListInteractor {
 extension ListInteractor: ListInteractorInput {
     
     func executeRequest() {
-        dataManager?.getItems(completion: { result in
+        dataManager?.getItems(completion: {[weak self] result in
             switch result {
             case .failure(let error):
-                output?.failedRequest()
+                self?.output?.failedRequest(error: error)
             case .success(let list):
-                output?.executedSuccessfulRequest(items: list)
+                self?.output?.executedSuccessfulRequest(items: list)
             }
         })
     }

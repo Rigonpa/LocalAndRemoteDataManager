@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ListPresenter {
+final class ListPresenter {
     
     var router: ListRouterProtocol?
     weak var view: ListViewProtocol?
@@ -23,6 +23,7 @@ extension ListPresenter: ListPresenterProtocol {
     }
     
     func viewIsReady() {
+        view?.showLoading()
         interactor?.executeRequest()
     }
 }
@@ -30,10 +31,12 @@ extension ListPresenter: ListPresenterProtocol {
 // From ListIteractor
 extension ListPresenter: ListInteractorOutput {
     func executedSuccessfulRequest(items: [ListItemModel]) {
+        view?.hideLoading()
         view?.showItems(items: items)
     }
     
-    func failedRequest() {
-        view?.onFetchingDataError()
+    func failedRequest(error: Error) {
+        view?.hideLoading()
+        view?.onFetchingDataError(error: error)
     }
 }

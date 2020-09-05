@@ -7,9 +7,19 @@
 //
 
 import Foundation
+import Alamofire
+import AlamofireObjectMapper
 
 class RemoteDataManager: RemoteDataManagerProtocol {
-    func downloadItems(completion: (Result<[ListItemModel], Error>) -> Void) {
-        
+    func downloadItems(completion: @escaping (Result<[ListItemModel], Error>) -> Void) {
+        guard let url = URL(string: "https://fierce-cove-29863.herokuapp.com/getAllPosts") else { return }
+        AF.request(url).validate().responseArray { (response: AFDataResponse<[ListItemModel]>) in
+            switch response.result {
+            case .failure(let error):
+                completion(.failure(error))
+            case .success(let list):
+                completion(.success(list))
+            }
+        }
     }
 }

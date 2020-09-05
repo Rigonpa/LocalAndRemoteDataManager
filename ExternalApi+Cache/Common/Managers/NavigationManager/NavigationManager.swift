@@ -11,7 +11,7 @@ import UIKit
 class NavigationManager: ServiceManager {
     var name: String = "NavigationManager"
     
-    var rootNavBar: UINavigationController?
+    var rootNavBar = UINavigationController()
     var rootFlow: FlowCoordinator?
     
     let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
@@ -22,7 +22,7 @@ class NavigationManager: ServiceManager {
     
     func startApp() {
         let mainFlow = MainFlow()
-        let navigationController = mainFlow.startFlow()
+        guard let navigationController = mainFlow.startFlow() else { return }
         rootFlow = mainFlow
         rootNavBar = navigationController
         

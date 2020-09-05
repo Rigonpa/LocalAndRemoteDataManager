@@ -33,14 +33,14 @@ protocol ListInteractorInput: class {
 protocol ListDataManager: class {
     
     // Interactor to DataManager
-    func getItems(completion: (Result<[ListItemModel], Error>) -> Void)
+    func getItems(completion: @escaping (Result<[ListItemModel], Error>) -> Void)
 }
 
 protocol ListInteractorOutput: class {
     
     // Interactor to Presenter
     func executedSuccessfulRequest(items: [ListItemModel])
-    func failedRequest()
+    func failedRequest(error: Error)
 }
 
 protocol ListViewProtocol: class {
@@ -48,5 +48,7 @@ protocol ListViewProtocol: class {
     
     // Presenter to View
     func showItems(items: [ListItemModel])
-    func onFetchingDataError()
+    func onFetchingDataError(error: Error)
+    func showLoading()
+    func hideLoading()
 }

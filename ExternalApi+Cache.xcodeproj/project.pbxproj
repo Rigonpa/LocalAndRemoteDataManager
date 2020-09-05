@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,7 +32,6 @@
 		93FAF03B250286EF004E0EF8 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FAF03A250286EF004E0EF8 /* DetailPresenter.swift */; };
 		93FAF03D250286F7004E0EF8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FAF03C250286F7004E0EF8 /* DetailView.swift */; };
 		93FAF03F25028703004E0EF8 /* DetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FAF03E25028703004E0EF8 /* DetailContract.swift */; };
-		93FAF04125029310004E0EF8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93FAF04025029310004E0EF8 /* Default-568h@2x.png */; };
 		93FAF0482502B121004E0EF8 /* CoreDataDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93FAF0462502B121004E0EF8 /* CoreDataDatabase.xcdatamodeld */; };
 		E813B8DCA314B4B8D73C8A51 /* Pods_ExternalApi_CacheTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7763A0318F562EFFBC170637 /* Pods_ExternalApi_CacheTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,7 +78,6 @@
 		93FAF03A250286EF004E0EF8 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		93FAF03C250286F7004E0EF8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		93FAF03E25028703004E0EF8 /* DetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContract.swift; sourceTree = "<group>"; };
-		93FAF04025029310004E0EF8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		93FAF0472502B121004E0EF8 /* CoreDataDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataDatabase.xcdatamodel; sourceTree = "<group>"; };
 		B1F72B916410C7E0C50C8267 /* Pods_ExternalApi_Cache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExternalApi_Cache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8DA15BDF32E2B4F5D6A287 /* Pods-ExternalApi+Cache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExternalApi+Cache.release.xcconfig"; path = "Target Support Files/Pods-ExternalApi+Cache/Pods-ExternalApi+Cache.release.xcconfig"; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				935229742501311400D5A404 /* Assets.xcassets */,
-				93FAF04025029310004E0EF8 /* Default-568h@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -289,7 +286,6 @@
 				CA538F8F59D757FB06FFC2B0 /* Pods-ExternalApi+CacheTests.debug.xcconfig */,
 				4AC7B9D928FE68D14C327FC5 /* Pods-ExternalApi+CacheTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -378,7 +374,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				935229752501311400D5A404 /* Assets.xcassets in Resources */,
-				93FAF04125029310004E0EF8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
