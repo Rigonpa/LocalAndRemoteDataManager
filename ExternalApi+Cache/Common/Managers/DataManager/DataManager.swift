@@ -11,25 +11,36 @@ import Foundation
 class DataManager: ServiceManager {
     var name: String = "DataManager"
     
+    var localDataManager: LocalDataManagerProtocol? = LocalDataManager()
+    
+    var remoteDataManager: RemoteDataManagerProtocol? = RemoteDataManager()
+
+    /* Change done for being able to test data manager (DataMangerTest.test)
     lazy var localDataManager: LocalDataManagerProtocol = {
         let ldm = LocalDataManager()
         return ldm
     }()
-    
+
     lazy var remoteDataManager: RemoteDataManagerProtocol = {
         let rdm = RemoteDataManager()
         return rdm
     }()
+     */
+ 
     
     func startup(completion: (ServiceManager?) -> Void) {
         completion(self)
     }
 }
 
+extension DataManager: DataManagerProtocol {
+    
+}
+
 extension DataManager: ListDataManager {
     func getItems(completion: @escaping (Result<[ListItemModel], Error>) -> Void) {
         // First check if it is locally saved the list:
-        localDataManager.getItems { resultCoreData in
+        localDataManager?.getItems { resultCoreData in
             switch resultCoreData {
                 /* I do not know how core data behaves when the desired array of NSManagedObject is null,
                  if it throws an error or just empty array []
@@ -50,7 +61,7 @@ extension DataManager: ListDataManager {
     
     private func itemsAreNotLocallySaved(completion: @escaping (Result<[ListItemModel], Error>) -> Void) {
         // Then (list has not been saved previously in core data) ask for it through external api
-        remoteDataManager.downloadItems {[weak self] resultExternalApi in
+        remoteDataManager?.downloadItems {[weak self] resultExternalApi in
             switch resultExternalApi {
             case .failure(let error):
                 completion(.failure(error)) // Error from remoteDataManager actions ***********
@@ -62,6 +73,6 @@ extension DataManager: ListDataManager {
     }
     
     private func saveItemsInCoreData(list: [ListItemModel]) {
-        try? localDataManager.persistItems(items: list)
+        try? localDataManager?.persistItems(items: list)
     }
 }

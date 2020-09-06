@@ -24,7 +24,7 @@ protocol ListPresenterProtocol: class {
 
 protocol ListInteractorInput: class {
     var output: ListInteractorOutput? { get set }
-    var dataManager: DataManager? { get set }
+    var dataManager: ListDataManager? { get set }
     
     // Presenter to Interactor
     func executeRequest()

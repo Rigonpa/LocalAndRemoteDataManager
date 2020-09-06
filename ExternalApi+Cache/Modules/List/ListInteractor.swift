@@ -11,7 +11,7 @@ import Foundation
 final class ListInteractor {
     
     weak var output: ListInteractorOutput?
-    var dataManager: DataManager?
+    var dataManager: ListDataManager?
 }
 
 extension ListInteractor: ListInteractorInput {

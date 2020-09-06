@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9308E21172AC3425473C8A13 /* Pods_ExternalApi_Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1F72B916410C7E0C50C8267 /* Pods_ExternalApi_Cache.framework */; };
+		934C876F2505072800B75EA6 /* DataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C876E2505072800B75EA6 /* DataManagerTest.swift */; };
+		934C877125054ABC00B75EA6 /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934C877025054ABC00B75EA6 /* DataManagerProtocol.swift */; };
 		9352296C2501311300D5A404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352296B2501311300D5A404 /* AppDelegate.swift */; };
 		9352296E2501311300D5A404 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352296D2501311300D5A404 /* SceneDelegate.swift */; };
 		935229752501311400D5A404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935229742501311400D5A404 /* Assets.xcassets */; };
-		935229832501311400D5A404 /* ExternalApi_CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935229822501311400D5A404 /* ExternalApi_CacheTests.swift */; };
+		935229832501311400D5A404 /* InteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935229822501311400D5A404 /* InteractorTest.swift */; };
 		9352298F2501324700D5A404 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9352298E2501324700D5A404 /* Manager.swift */; };
 		935229912501325500D5A404 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935229902501325500D5A404 /* ServiceManager.swift */; };
 		935229942501328B00D5A404 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935229932501328B00D5A404 /* NavigationManager.swift */; };
@@ -50,13 +52,15 @@
 		4AC7B9D928FE68D14C327FC5 /* Pods-ExternalApi+CacheTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExternalApi+CacheTests.release.xcconfig"; path = "Target Support Files/Pods-ExternalApi+CacheTests/Pods-ExternalApi+CacheTests.release.xcconfig"; sourceTree = "<group>"; };
 		7763A0318F562EFFBC170637 /* Pods_ExternalApi_CacheTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExternalApi_CacheTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CE2B8F27ECC88CAB0A1CBF /* Pods-ExternalApi+Cache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExternalApi+Cache.debug.xcconfig"; path = "Target Support Files/Pods-ExternalApi+Cache/Pods-ExternalApi+Cache.debug.xcconfig"; sourceTree = "<group>"; };
+		934C876E2505072800B75EA6 /* DataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTest.swift; sourceTree = "<group>"; };
+		934C877025054ABC00B75EA6 /* DataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerProtocol.swift; sourceTree = "<group>"; };
 		935229682501311300D5A404 /* ExternalApi+Cache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ExternalApi+Cache.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9352296B2501311300D5A404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9352296D2501311300D5A404 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		935229742501311400D5A404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		935229792501311400D5A404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9352297E2501311400D5A404 /* ExternalApi+CacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ExternalApi+CacheTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		935229822501311400D5A404 /* ExternalApi_CacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalApi_CacheTests.swift; sourceTree = "<group>"; };
+		935229822501311400D5A404 /* InteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorTest.swift; sourceTree = "<group>"; };
 		935229842501311400D5A404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9352298E2501324700D5A404 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		935229902501325500D5A404 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
@@ -146,7 +150,8 @@
 		935229812501311400D5A404 /* ExternalApi+CacheTests */ = {
 			isa = PBXGroup;
 			children = (
-				935229822501311400D5A404 /* ExternalApi_CacheTests.swift */,
+				935229822501311400D5A404 /* InteractorTest.swift */,
+				934C876E2505072800B75EA6 /* DataManagerTest.swift */,
 				935229842501311400D5A404 /* Info.plist */,
 			);
 			path = "ExternalApi+CacheTests";
@@ -192,6 +197,7 @@
 		9352299C250132ED00D5A404 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				934C877025054ABC00B75EA6 /* DataManagerProtocol.swift */,
 				935229A32501535C00D5A404 /* DataManager.swift */,
 				9352299E2501331200D5A404 /* LocalDataManager */,
 				9352299D2501330900D5A404 /* RemoteDataManager */,
@@ -466,6 +472,7 @@
 				9352298F2501324700D5A404 /* Manager.swift in Sources */,
 				935229A22501333300D5A404 /* LocalDataManager.swift in Sources */,
 				93FAF0482502B121004E0EF8 /* CoreDataDatabase.xcdatamodeld in Sources */,
+				934C877125054ABC00B75EA6 /* DataManagerProtocol.swift in Sources */,
 				9352299B250132CB00D5A404 /* MainFlow.swift in Sources */,
 				93FAF03D250286F7004E0EF8 /* DetailView.swift in Sources */,
 				937A9289250238540023A21A /* ListInteractor.swift in Sources */,
@@ -485,7 +492,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935229832501311400D5A404 /* ExternalApi_CacheTests.swift in Sources */,
+				935229832501311400D5A404 /* InteractorTest.swift in Sources */,
+				934C876F2505072800B75EA6 /* DataManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
