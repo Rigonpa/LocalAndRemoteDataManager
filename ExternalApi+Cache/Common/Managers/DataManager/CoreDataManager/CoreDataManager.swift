@@ -15,7 +15,7 @@ enum PersistenceError: Error {
     case objectNotFound
 }
 
-class LocalDataManager: LocalDataManagerProtocol {
+class CoreDataManager: CoreDataManagerProtocol {
     lazy var context: NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { fatalError()}
         return appDelegate.persistentContainer.viewContext

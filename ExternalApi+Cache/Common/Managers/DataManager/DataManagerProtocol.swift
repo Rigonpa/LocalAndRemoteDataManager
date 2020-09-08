@@ -9,6 +9,8 @@
 import Foundation
 
 protocol DataManagerProtocol {
-    var localDataManager: LocalDataManagerProtocol? { get set }
+    var coreDataManager: CoreDataManagerProtocol? { get set }
+    var realmDataManager: RealmDataManagerProtocol? { get set }
+    var firebaseDataManager: FirebaseDataManagerProtocol? { get set }
     var remoteDataManager: RemoteDataManagerProtocol? { get set }
 }

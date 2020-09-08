@@ -11,8 +11,9 @@ import Foundation
 class DataManager: ServiceManager {
     var name: String = "DataManager"
     
-    var localDataManager: LocalDataManagerProtocol? = LocalDataManager()
-    
+    var coreDataManager: CoreDataManagerProtocol? = CoreDataManager()
+    var realmDataManager: RealmDataManagerProtocol? = RealmDataManager() // Future usage
+    var firebaseDataManager: FirebaseDataManagerProtocol? = FirebaseDataManager() // Future usage
     var remoteDataManager: RemoteDataManagerProtocol? = RemoteDataManager()
 
     /* Change done for being able to test data manager (DataMangerTest.test)
@@ -40,7 +41,7 @@ extension DataManager: DataManagerProtocol {
 extension DataManager: ListDataManager {
     func getItems(completion: @escaping (Result<[ListItemModel], Error>) -> Void) {
         // First check if it is locally saved the list:
-        localDataManager?.getItems { resultCoreData in
+        coreDataManager?.getItems { resultCoreData in
             switch resultCoreData {
                 /* I do not know how core data behaves when the desired array of NSManagedObject is null,
                  if it throws an error or just empty array []
@@ -73,6 +74,6 @@ extension DataManager: ListDataManager {
     }
     
     private func saveItemsInCoreData(list: [ListItemModel]) {
-        try? localDataManager?.persistItems(items: list)
+        try? coreDataManager?.persistItems(items: list)
     }
 }
