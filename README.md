@@ -5,5 +5,6 @@
 - viper
 - setup of managers
 - CoreData and external api consumption
+- Data manager and iteractor tests
 
 ------
